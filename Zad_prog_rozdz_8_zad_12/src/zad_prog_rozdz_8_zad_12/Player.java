@@ -52,8 +52,6 @@ public class Player {
             
             playerPoints--;
         }
-        return playerPoints;
-        
-        
+        return playerPoints;  
     } 
 }

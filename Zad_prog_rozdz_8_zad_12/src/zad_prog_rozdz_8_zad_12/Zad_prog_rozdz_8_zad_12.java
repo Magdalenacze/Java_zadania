@@ -24,8 +24,8 @@ public class Zad_prog_rozdz_8_zad_12 {
         
         for (int count = 0; count < numberOfPlayers; count++) {
 
-                    players.add(new Player(JOptionPane.showInputDialog(null, "Podaj nazwę gracza nr: " + (count + 1))));
-                }
+            players.add(new Player(JOptionPane.showInputDialog(null, "Podaj nazwę gracza nr: " + (count + 1))));
+        }
         
         while (winner == -1) {
             
@@ -33,17 +33,12 @@ public class Zad_prog_rozdz_8_zad_12 {
                 
                 c.toss();
                 
-                
-                
-                if (players.get(count).updatePlayerPoints(c.getSideUp().equals(JOptionPane.showInputDialog(null, "Gracz: " + players.get(count).getPlayerName() + "\n\n Aktualna liczba punktów: " + players.get(count).getPlayerPoints() + "\n\n Podaj swój wybór - orzeł czy reszka: "))) == 5) {
+                String input = JOptionPane.showInputDialog(null, "Gracz: " + players.get(count).getPlayerName() + "\n\nAktualna liczba punktów: " + players.get(count).getPlayerPoints() + "\n\nPodaj swój wybór - orzeł czy reszka?: ");
+
+                if (players.get(count).updatePlayerPoints(c.getSideUp().equals(input)) == 5) {
                     
                     winner = count;
-                }
-                    
-                    
-                
-                
-                
+                }   
             }
         }
         
